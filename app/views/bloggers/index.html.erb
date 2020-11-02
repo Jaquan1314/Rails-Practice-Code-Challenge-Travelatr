@@ -1,0 +1,5 @@
+<h1>Bloggers</h1>
+
+<% @bloggers.each do |blogger| %>
+    <p><%= link_to blogger.name, post_path(blogger) %></p>
+<% end %>

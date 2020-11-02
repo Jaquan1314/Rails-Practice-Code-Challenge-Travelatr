@@ -1,0 +1,14 @@
+<fieldset><legend><h1><%= @destination.name %></h1></legend>
+Most Recent Posts:
+<% @destination.most_recent.each do |post| %>
+<div><ul>
+        <li>
+            <%= link_to post.title, post_path(post) %>
+        </li>
+    </ul>
+</div>
+<% end %>
+<p>Featured Post: <%= link_to @destination.featured.title, post_path(@destination.featured) %></p>
+<p>Average Age of Bloggers: <%= @destination.blogger_avg %></p>
+
+</fieldset>

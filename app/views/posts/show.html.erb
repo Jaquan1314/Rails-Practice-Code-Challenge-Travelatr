@@ -1,0 +1,11 @@
+<fieldset><legend><h1><%= @post.title %></h1></legend>
+
+<div>
+    <p><%= @post.content %></p>
+</div>
+
+Blogger: <%= link_to @post.blogger.name, blogger_path(@post.blogger) %><br>
+Destination: <%= link_to @post.destination.name, destination_path(@post.destination) %><br><br>
+</fieldset><br>
+
+<%= button_to "Like", like_path %>

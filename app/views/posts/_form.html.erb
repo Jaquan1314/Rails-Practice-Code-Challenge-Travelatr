@@ -1,0 +1,15 @@
+
+
+<fieldset><legend><h1>Post Form</h1></legend>
+<%= form_for(@post) do |f| %>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %><br>
+
+    Blogger: <%= f.collection_select :blogger_id, Blogger.all, :id, :name %><br>
+    Destination: <%= f.collection_select :destination_id, Destination.all, :id, :name %><br><br>
+
+    <%= f.submit %>
+<% end %>
+</fieldset><br>

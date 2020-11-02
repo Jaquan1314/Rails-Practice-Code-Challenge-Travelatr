@@ -1,0 +1,7 @@
+<fieldset><legend><h1><%= @blogger.name %></h1></legend>
+<p>Age: <%= @blogger.age %></p> 
+<p>Bio: <%= @blogger.bio %></p>  
+<p>Total Likes: <%= @blogger.total_likes %></p>  
+<p>Most Popular Post: <%= link_to @blogger.top_post.title, post_path(@blogger.top_post) %></p>  
+</fieldset><br>
+<%= link_to "Back", bloggers_path %>
